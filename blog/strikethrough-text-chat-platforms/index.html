@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Strikethrough Text in Discord (and Other Chat Apps)</title>
+<meta name="description" content="Step-by-step guide to strikethrough text in Discord using Markdown, why it sometimes fails, how to combine it with bold, and how the same trick works in Slack, Teams, and other chat apps.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://strikethroughtextgenerators.com/blog/strikethrough-text-chat-platforms/">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="strikethroughtextgenerators" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Strikethrough Text in Discord (and Other Chat Apps)">
+<meta property="og:description" content="Discord's built-in Markdown strikethrough, why it sometimes fails, and how to cross out text in chat apps that don't support it natively.">
+<meta property="og:url" content="https://strikethroughtextgenerators.com/blog/strikethrough-text-chat-platforms/">
+<meta property="og:site_name" content="Strikethrough Text Generators">
+<meta property="og:image" content="https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-discord">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Strikethrough Text in Discord">
+<meta name="twitter:description" content="Discord's Markdown strikethrough, explained, plus other chat apps.">
+<meta name="twitter:image" content="https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-discord">
+
+<script>(function(){try{if(localStorage.getItem('stg-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://strikethroughtextgenerators.com/"},
+  {"@type":"ListItem","position":2,"name":"Blog","item":"https://strikethroughtextgenerators.com/blog/"},
+  {"@type":"ListItem","position":3,"name":"Strikethrough Text in Chat Apps","item":"https://strikethroughtextgenerators.com/blog/strikethrough-text-chat-platforms/"}
+]}
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BlogPosting",
+  "headline":"How to Strikethrough Text in Discord (and Other Chat Apps)",
+  "description":"Step-by-step guide to strikethrough text in Discord using Markdown, why it sometimes fails, and how it works in other chat apps.",
+  "image":"https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-discord",
+  "author":{"@type":"Organization","name":"Strikethrough Text Generators"},
+  "publisher":{"@type":"Organization","name":"Strikethrough Text Generators","url":"https://strikethroughtextgenerators.com/"},
+  "mainEntityOfPage":"https://strikethroughtextgenerators.com/blog/strikethrough-text-chat-platforms/",
+  "datePublished":"2026-08-22","dateModified":"2026-08-23" }
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How do I strikethrough text in Discord?","acceptedAnswer":{"@type":"Answer","text":"Wrap the text in double tildes, like ~~this~~, and Discord renders it with a line through it automatically in any message, channel topic, or bio that supports Markdown."}},
+  {"@type":"Question","name":"Why doesn't strikethrough work in my Discord username or status?","acceptedAnswer":{"@type":"Answer","text":"Discord only renders Markdown syntax inside messages and some text fields. Usernames and certain profile fields don't parse Markdown, so double tildes show up literally instead of as a line. Use a Unicode strikethrough generator there instead."}},
+  {"@type":"Question","name":"Does Slack or Microsoft Teams support strikethrough?","acceptedAnswer":{"@type":"Answer","text":"Slack supports it with single tildes, like ~this~. Microsoft Teams does not have a Markdown shortcut by default, but you can select text and use the strikethrough button in the formatting toolbar, or paste in Unicode strikethrough text generated elsewhere."}},
+  {"@type":"Question","name":"Can I strikethrough text on Discord mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes — the same double-tilde Markdown works identically on Discord's mobile apps as it does on desktop."}},
+  {"@type":"Question","name":"Can I combine strikethrough with bold text in Discord?","acceptedAnswer":{"@type":"Answer","text":"Yes. Wrap the text in three asterisks and two tildes together, like ~~***text***~~, or nest ~~**text**~~ for bold plus strikethrough. Discord parses nested Markdown as long as the symbols are balanced correctly."}},
+  {"@type":"Question","name":"Why does my ~~text~~ show up literally instead of rendering?","acceptedAnswer":{"@type":"Answer","text":"This usually happens when there's a space right after the opening tildes or before the closing ones, when the text is inside a code block (which disables Markdown), or when it's typed in a field that doesn't parse Markdown at all, like a username."}},
+  {"@type":"Question","name":"Does strikethrough work inside Discord code blocks?","acceptedAnswer":{"@type":"Answer","text":"No. Code blocks (wrapped in backticks) display text exactly as typed and intentionally disable all Markdown formatting, including strikethrough, so double tildes show up as literal characters."}},
+  {"@type":"Question","name":"Can Discord bots send strikethrough text?","acceptedAnswer":{"@type":"Answer","text":"Yes — bots can send the same ~~text~~ Markdown syntax in their messages and embeds, and Discord renders it the same way it would for a message typed by a person."}}
+]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="/"><img src="/favicon-96x96.png" alt="Strikethrough Text Generators logo" width="22" height="22" style="border-radius:5px;display:block;"><span class="brand-text">strikethroughtextgenerators</span></a>
+  <div class="header-right">
+    <button class="mobile-menu-btn" id="mobileMenuToggle" type="button" aria-label="Menu" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+    <nav class="top-links"><a href="/#tool">Tool</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span>Chat Apps</p>
+  <section class="hero" style="text-align:left; padding-left:0; padding-right:0;">
+    <p class="badge"><span class="dot"></span>guide · 6 min read</p>
+    <h1 style="margin-left:0;">How to Strikethrough Text in Discord</h1>
+    <p class="lede" style="margin-left:0;">Discord is one of the few chat apps with strikethrough built in — you just need to know the syntax. Here's how it works, why it sometimes fails, and what to do when it doesn't.</p>
+    <img src="/assets/images/blog/how-to-strikethrough-text-in-discord.jpg" alt="How to strikethrough text in Discord" width="800" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin-top:20px;">
+  </section>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <div class="callout">
+        <p>Need strikethrough for a username, bio, or anywhere Markdown won't render?</p>
+        <a class="btn" href="/#tool">Use the generator →</a>
+      </div>
+      <h2>The Discord Strikethrough Shortcut</h2>
+      <p>Discord supports Markdown formatting inside messages. To strikethrough text, wrap it in double tildes:</p>
+      <p><code>~~this text is struck through~~</code></p>
+      <p>Type that into any Discord message box, channel topic, or bio field that renders Markdown, and it displays with a line through it as soon as you send it. There's no menu or button — it's purely typed syntax, which is why so many people search for it instead of finding it by clicking around.</p>
+
+      <h2>Combining Strikethrough with Bold or Italic</h2>
+      <p>Discord's Markdown supports nesting, so you can stack strikethrough with other formatting in the same message. Wrap bold text (double asterisks) inside the tildes for bold-and-crossed-out text: <code>~~**text**~~</code>. For italic, use single asterisks inside the tildes: <code>~~*text*~~</code>. Discord parses these from the outside in, so the symbols need to be balanced and in the right order or it will fail to render and show the raw characters instead.</p>
+
+      <h2>When Discord's Strikethrough Doesn't Work</h2>
+      <p>A few spots in Discord don't parse Markdown, so the double tildes show up literally instead of rendering: usernames, server names, and some profile fields fall into this category. If you want crossed-out text somewhere Discord won't format it for you, generate it as Unicode strikethrough text instead — it looks the same but is made of styled characters rather than Markdown, so it works anywhere plain text is accepted.</p>
+      
+
+      <h3>Common Reasons ~~Text~~ Fails to Render</h3>
+      <ul>
+        <li><strong>A space right after the opening tildes</strong> — <code>~~ text~~</code> won't render; it needs to be <code>~~text~~</code> with no gap.</li>
+        <li><strong>Typed inside a code block</strong> — anything wrapped in backticks intentionally ignores all Markdown, strikethrough included.</li>
+        <li><strong>Typed in a field that doesn't parse Markdown at all</strong> — usernames and some profile fields fall here regardless of spacing.</li>
+        <li><strong>Unbalanced tildes</strong> — missing a closing <code>~~</code> leaves the opening pair showing as plain text.</li>
+      </ul>
+
+      <h2>Strikethrough in Threads, Forum Posts, and Bot Messages</h2>
+      <p>Markdown strikethrough works the same way inside Discord threads and forum-channel posts as it does in regular channels — no different syntax needed. Bots can also send <code>~~text~~</code> in their messages and embeds, and Discord renders it identically to a message a person typed.</p>
+
+      <h2>Strikethrough in Other Chat Apps</h2>
+      <p>Discord isn't the only chat app with a Markdown shortcut, but the syntax isn't universal:</p>
+      <ul>
+        <li><strong>Slack</strong> — single tildes: <code>~this~</code></li>
+        <li><strong>Microsoft Teams</strong> — no Markdown shortcut by default; select text and use the strikethrough button in the formatting toolbar instead</li>
+        <li><strong>Most other chat and messaging apps</strong> — no strikethrough support at all, native or Markdown, which is where a Unicode generator becomes the only option</li>
+      </ul>
+      <p>For platforms with no formatting support whatsoever — most direct-messaging and social apps — see our <a href="/blog/strikethrough-text-social-media/">social media strikethrough guide</a>.</p>
+
+      <h3>A Quick Note on Mobile</h3>
+      <p>Markdown syntax behaves identically on mobile apps as it does on desktop for both Discord and Slack — there's no separate mobile shortcut to learn.</p>
+    </section>
+
+    <section class="section" id="faq">
+      <p class="eyebrow">// good to know</p>
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item" open><summary>How do I strikethrough text in Discord?</summary><p class="a">Wrap the text in double tildes, like ~~this~~, and Discord renders it with a line through it in any message, channel topic, or bio that supports Markdown.</p></details>
+      <details class="faq-item"><summary>Why doesn't strikethrough work in my Discord username or status?</summary><p class="a">Those fields don't parse Markdown, so double tildes show up literally. Use a Unicode strikethrough generator there instead.</p></details>
+      <details class="faq-item"><summary>Does Slack or Microsoft Teams support strikethrough?</summary><p class="a">Slack supports it with single tildes, like ~this~. Teams has no Markdown shortcut by default — use the formatting toolbar's strikethrough button, or paste in generated Unicode text.</p></details>
+      <details class="faq-item"><summary>Can I strikethrough text on Discord mobile?</summary><p class="a">Yes — the same double-tilde Markdown works identically on Discord's mobile apps as on desktop.</p></details>
+      <details class="faq-item"><summary>Can I combine strikethrough with bold text in Discord?</summary><p class="a">Yes. Use ~~**text**~~ for bold and crossed out together, or ~~*text*~~ for italic and crossed out. The symbols need to be balanced and nested correctly.</p></details>
+      <details class="faq-item"><summary>Why does my ~~text~~ show up literally instead of rendering?</summary><p class="a">Usually a space right after the opening tildes, text inside a code block, unbalanced tildes, or a field that doesn't parse Markdown at all.</p></details>
+      <details class="faq-item"><summary>Does strikethrough work inside Discord code blocks?</summary><p class="a">No — code blocks intentionally disable all Markdown formatting, including strikethrough, so it displays exactly as typed.</p></details>
+      <details class="faq-item"><summary>Can Discord bots send strikethrough text?</summary><p class="a">Yes — bots can use the same ~~text~~ syntax in messages and embeds, and it renders the same as a message typed by a person.</p></details>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">// related</p>
+      <h2>Keep Reading</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/blog/strikethrough-text-social-media/"><div class="k">Social</div><div class="t">Strikethrough Text on Social Media</div></a>
+        <a class="related-card" href="/blog/strikethrough-text-keyboard-shortcuts/"><div class="k">Shortcuts</div><div class="t">Every Strikethrough Keyboard Shortcut</div></a>
+        <a class="related-card" href="/"><div class="k">Tool</div><div class="t">Strikethrough Text Generator</div></a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-links"><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms &amp; Conditions</a></div>
+  <p>strikethroughtextgenerators.com — free, no account required.</p>
+</footer>
+
+<script src="/assets/js/theme.js"></script>
+</body>
+</html>

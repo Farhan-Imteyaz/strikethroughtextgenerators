@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Strikethrough Text in Excel (Shortcut, Formula & Filter)</title>
+<meta name="description" content="How to strikethrough text in Excel with Format Cells, a keyboard shortcut, a checkbox formula, removing it, and the differences between desktop, Excel Online, and the mobile app.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://strikethroughtextgenerators.com/blog/strikethrough-text-spreadsheets/">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="strikethroughtextgenerators" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Strikethrough Text in Excel (Shortcut, Formula & Filter)">
+<meta property="og:description" content="Format Cells, the keyboard shortcut, checkbox formulas, removal, and Excel Online vs desktop vs mobile.">
+<meta property="og:url" content="https://strikethroughtextgenerators.com/blog/strikethrough-text-spreadsheets/">
+<meta property="og:site_name" content="Strikethrough Text Generators">
+<meta property="og:image" content="https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-excel.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Strikethrough Text in Excel">
+<meta name="twitter:description" content="Shortcut, formula, filter, and removal tricks, explained.">
+<meta name="twitter:image" content="https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-excel.jpg">
+
+<script>(function(){try{if(localStorage.getItem('stg-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://strikethroughtextgenerators.com/"},
+  {"@type":"ListItem","position":2,"name":"Blog","item":"https://strikethroughtextgenerators.com/blog/"},
+  {"@type":"ListItem","position":3,"name":"Strikethrough Text in Spreadsheets","item":"https://strikethroughtextgenerators.com/blog/strikethrough-text-spreadsheets/"}
+]}
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BlogPosting",
+  "headline":"How to Strikethrough Text in Excel (Shortcut, Formula & Filter)",
+  "description":"Format Cells, the keyboard shortcut, checkbox formulas, removal, and Excel Online vs desktop vs mobile.",
+  "image":"https://strikethroughtextgenerators.com/assets/images/blog/how-to-strikethrough-text-in-excel.jpg",
+  "author":{"@type":"Organization","name":"Strikethrough Text Generators"},
+  "publisher":{"@type":"Organization","name":"Strikethrough Text Generators","url":"https://strikethroughtextgenerators.com/"},
+  "mainEntityOfPage":"https://strikethroughtextgenerators.com/blog/strikethrough-text-spreadsheets/",
+  "datePublished":"2026-08-22","dateModified":"2026-08-23" }
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is the keyboard shortcut for strikethrough in Excel?","acceptedAnswer":{"@type":"Answer","text":"Select the cell or text and press Ctrl+5 on Windows, or Cmd+Shift+X on Mac. Excel doesn't put this on the ribbon by default, which is why it's easy to miss."}},
+  {"@type":"Question","name":"How do I strikethrough text in Excel using Format Cells?","acceptedAnswer":{"@type":"Answer","text":"Select the cell, press Ctrl+1 to open Format Cells, go to the Font tab, and check the Strikethrough box under Effects."}},
+  {"@type":"Question","name":"Can I automatically strikethrough a row when a checkbox is checked?","acceptedAnswer":{"@type":"Answer","text":"Yes, using Conditional Formatting. Create a rule with a formula like =$A2=TRUE (pointing at your checkbox cell), then set the format for that rule to Strikethrough."}},
+  {"@type":"Question","name":"How do I filter or find strikethrough text in Excel?","acceptedAnswer":{"@type":"Answer","text":"Excel doesn't have a native filter for strikethrough formatting. The common workaround is Find & Select > Find, opening Format, and choosing Strikethrough as a search criterion, or using a helper column with a formula-based flag if you applied strikethrough via conditional formatting."}},
+  {"@type":"Question","name":"Why is my text automatically showing as strikethrough in Excel?","acceptedAnswer":{"@type":"Answer","text":"This is usually a conditional formatting rule already applied to that sheet — often tied to a checkbox or a specific value — rather than manual formatting. Check Home > Conditional Formatting > Manage Rules to find and remove it."}},
+  {"@type":"Question","name":"How do I remove strikethrough formatting in Excel?","acceptedAnswer":{"@type":"Answer","text":"Select the cell and press Ctrl+5 again to toggle it off, or open Format Cells (Ctrl+1) and uncheck Strikethrough under the Font tab's Effects section."}},
+  {"@type":"Question","name":"Does the Ctrl+5 shortcut work in Excel Online?","acceptedAnswer":{"@type":"Answer","text":"Yes, Ctrl+5 works the same way in Excel Online (the browser version) as it does in the desktop app. On Mac, use Cmd+Shift+X in both versions as well."}},
+  {"@type":"Question","name":"Can I strikethrough text in the Excel mobile app?","acceptedAnswer":{"@type":"Answer","text":"Yes — tap the cell, tap the Font formatting option in the mobile toolbar, and toggle Strikethrough from there. There's no keyboard shortcut on mobile since it relies on the on-screen menu."}}
+]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="/"><img src="/favicon-96x96.png" alt="Strikethrough Text Generators logo" width="22" height="22" style="border-radius:5px;display:block;"><span class="brand-text">strikethroughtextgenerators</span></a>
+  <div class="header-right">
+    <button class="mobile-menu-btn" id="mobileMenuToggle" type="button" aria-label="Menu" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+    <nav class="top-links"><a href="/#tool">Tool</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span>Spreadsheets</p>
+  <section class="hero" style="text-align:left; padding-left:0; padding-right:0;">
+    <p class="badge"><span class="dot"></span>guide · 5 min read</p>
+    <h1 style="margin-left:0;">How to Strikethrough Text in Excel</h1>
+    <p class="lede" style="margin-left:0;">There's no strikethrough button on the ribbon — here's the shortcut, the menu path, how to remove it, and how it differs across desktop, web, and mobile.</p>
+    <img src="/assets/images/blog/how-to-strikethrough-text-in-excel.jpg" alt="How to strikethrough text in Discord" width="800" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin-top:20px;">
+  </section>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <div class="callout">
+        <p>Need strikethrough text for something outside a spreadsheet — a caption, bio, or chat message?</p>
+        <a class="btn" href="/#tool">Use the generator →</a>
+      </div>
+      <h2>The Excel Strikethrough Shortcut</h2>
+      <p>Select your cell or text and press:</p>
+      <ul>
+        <li><strong>Windows:</strong> <code>Ctrl + 5</code></li>
+        <li><strong>Mac:</strong> <code>Cmd + Shift + X</code></li>
+      </ul>
+      <p>Unlike Word, Excel doesn't put a strikethrough button on the Home ribbon by default, which is why this shortcut is worth memorizing rather than hunting for it in the interface.</p>
+
+      <h2>Using Format Cells</h2>
+      <p>If you'd rather use a menu, select the cell, press <code>Ctrl+1</code> to open <strong>Format Cells</strong>, go to the <strong>Font</strong> tab, and check <strong>Strikethrough</strong> under Effects. Click OK to apply it.</p>
+
+      <h2>Removing Strikethrough</h2>
+      <p>Strikethrough toggles on and off with the same shortcut — select the cell and press <code>Ctrl+5</code> again to remove it, or reopen <strong>Format Cells</strong> (<code>Ctrl+1</code>) and uncheck the Strikethrough box under Effects.</p>
+
+      <h2>Automatic Strikethrough with a Checkbox</h2>
+      <p>A common use case is crossing out a to-do row automatically when its checkbox is checked. To do this:</p>
+      <ol class="steps">
+        <li><p>Insert a checkbox from the Insert menu and link it to a cell.<span class="sub">Right-click the checkbox, choose Format Control, and set a cell link.</span></p></li>
+        <li><p>Select the row you want to strike through.<span class="sub">Or just the relevant cells.</span></p></li>
+        <li><p>Open Home &gt; Conditional Formatting &gt; New Rule.<span class="sub">Choose "Use a formula to determine which cells to format."</span></p></li>
+        <li><p>Enter a formula like <code>=$A2=TRUE</code> and set the format to Strikethrough.<span class="sub">Replace A2 with your checkbox's linked cell.</span></p></li>
+      </ol>
+
+      <h2>Finding or Filtering Strikethrough Cells</h2>
+      <p>Excel has no built-in filter specifically for strikethrough formatting. The most reliable workaround is <strong>Find &amp; Select &gt; Find</strong>, then opening <strong>Format</strong> in the dialog and setting Strikethrough as a search criterion — it will highlight matching cells, though it won't build a live filter. If you applied strikethrough through conditional formatting tied to a checkbox, a simpler approach is filtering on the checkbox's linked column directly instead of the formatting itself.</p>
+
+      <h3>Excel Desktop vs. Excel Online vs. Mobile</h3>
+      <p>The <code>Ctrl+5</code> shortcut works identically in Excel Online (the browser version) and the Windows desktop app — no differences there. On Mac, <code>Cmd+Shift+X</code> covers both the desktop app and Excel Online in a Mac browser. The mobile apps for iOS and Android don't support keyboard shortcuts at all: tap the cell, tap the Font formatting option in the toolbar, and toggle Strikethrough from the panel that appears.</p>
+
+      
+    </section>
+
+    <section class="section" id="faq">
+      <p class="eyebrow">// good to know</p>
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item" open><summary>What is the keyboard shortcut for strikethrough in Excel?</summary><p class="a">Ctrl+5 on Windows, or Cmd+Shift+X on Mac.</p></details>
+      <details class="faq-item"><summary>How do I strikethrough using Format Cells?</summary><p class="a">Press Ctrl+1, go to the Font tab, and check Strikethrough under Effects.</p></details>
+      <details class="faq-item"><summary>Can I auto-strikethrough a row when a checkbox is checked?</summary><p class="a">Yes, with Conditional Formatting using a formula like =$A2=TRUE pointing at your checkbox's linked cell.</p></details>
+      <details class="faq-item"><summary>How do I filter or find strikethrough text in Excel?</summary><p class="a">Use Find & Select > Find, open Format, and choose Strikethrough as a search criterion. There's no native live filter for it.</p></details>
+      <details class="faq-item"><summary>Why is my text automatically showing as strikethrough?</summary><p class="a">Likely an existing conditional formatting rule. Check Home > Conditional Formatting > Manage Rules.</p></details>
+      <details class="faq-item"><summary>How do I remove strikethrough formatting in Excel?</summary><p class="a">Press Ctrl+5 again to toggle it off, or uncheck Strikethrough in Format Cells (Ctrl+1).</p></details>
+      <details class="faq-item"><summary>Does the Ctrl+5 shortcut work in Excel Online?</summary><p class="a">Yes — it works the same in Excel Online as in the desktop app. Use Cmd+Shift+X on Mac in both.</p></details>
+      <details class="faq-item"><summary>Can I strikethrough text in the Excel mobile app?</summary><p class="a">Yes — tap the cell, open the Font formatting option in the toolbar, and toggle Strikethrough. No keyboard shortcut exists on mobile.</p></details>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">// related</p>
+      <h2>Keep Reading</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/blog/strikethrough-text-cloud-docs/"><div class="k">Docs</div><div class="t">Strikethrough Text in Cloud Word Processors</div></a>
+        <a class="related-card" href="/blog/strikethrough-text-keyboard-shortcuts/"><div class="k">Shortcuts</div><div class="t">Every Strikethrough Keyboard Shortcut</div></a>
+        <a class="related-card" href="/"><div class="k">Tool</div><div class="t">Strikethrough Text Generator</div></a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-links"><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms &amp; Conditions</a></div>
+  <p>strikethroughtextgenerators.com — free, no account required.</p>
+</footer>
+
+<script src="/assets/js/theme.js"></script>
+</body>
+</html>

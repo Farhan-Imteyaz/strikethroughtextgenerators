@@ -111,6 +111,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width:760px){ .tool-grid{grid-template-columns:1fr;} }
   .pane{padding:22px 22px;}
   @media (max-width:480px){ .pane{padding:16px 16px;} }
+  @media (max-width:480px){
+  .tool{margin:16px auto 0; border-radius:10px;}
+  .pane{padding:8px 12px;}
+  textarea#input{min-height:44px; font-size:0.88rem; line-height:1.4;}
+  #output{min-height:44px; font-size:0.88rem; line-height:1.4;}
+  .upload-zone{padding:6px; margin-top:6px;}
+  .upload-hint{display:none;}
+  .out-actions{margin-top:6px; gap:5px;}
+  .controls{padding:6px 12px; gap:6px;}
+  .style-pills{gap:3px;}
+  .pill{padding:3px 7px; font-size:0.68rem;}
+  .control-group{gap:4px;}
+}
+  
   .pane + .pane{border-left:1px solid var(--border);}
   @media (max-width:760px){ .pane + .pane{border-left:none; border-top:1px solid var(--border);} }
   .pane-label{ display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono', monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-faint); margin-bottom:12px; }
@@ -165,7 +179,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     box-shadow:0 4px 14px -4px var(--accent); transform:translateY(-1px);
   }
 
-  .toggle-row{display:flex; gap:18px;}
+  .toggle-row{display:flex; gap:18px; flex-wrap:nowrap;}
+.switch{white-space:nowrap; flex-shrink:0;}
   .switch{display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-muted); cursor:pointer; user-select:none; position:relative;}
   .switch input{ position:absolute; opacity:0; width:0; height:0; }
   .switch .track{
@@ -176,10 +191,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     content:""; position:absolute; top:2px; left:2px; width:16px; height:16px; border-radius:50%;
     background:#fff; transition:transform .2s ease; box-shadow:0 1px 3px rgba(0,0,0,0.3);
   }
+
+  @media (max-width:480px){
+  .toggle-row{gap:14px;}
+  .switch{font-size:0.8rem;}
+}
   .switch input:checked + .track{ background:var(--accent); }
   .switch input:checked + .track::after{ transform:translateX(16px); }
   .switch input:focus-visible + .track{ outline:2px solid var(--accent); outline-offset:2px; }
   .switch:hover span.label-text{color:var(--text);}
+  html[data-theme="dark"] .upload-zone{ border-color:#3A3D44; }
+  html[data-theme="dark"] .upload-btn{ border-color:#3A3D44; }
 </style>
 </head>
 <body>

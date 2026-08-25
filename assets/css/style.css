@@ -296,6 +296,8 @@ button.ghost, a.ghost{
 button.ghost:hover, a.ghost:hover{color:var(--text); border-color:var(--accent);}
 button:focus-visible, a:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
+html[data-theme="dark"] button.ghost, html[data-theme="dark"] a.ghost{ border-color:#3A3D44; }
+
 /* ---------- simple form (contact page) ---------- */
 .form-field{margin-bottom:16px;}
 .form-field label{display:block; font-family:'JetBrains Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); margin-bottom:6px;}

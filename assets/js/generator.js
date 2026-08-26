@@ -18,7 +18,7 @@
 
   var STRIKE = {
     long: '\u0336', short: '\u0335', double: '\u0336\u0332', wavy: '\u0334',
-    underline: '\u0332', overline: '\u0305', dotted: '\u0323', tilde: '\u0303', slash: '\u0337'
+    underline: '\u0332', overline: '\u0305', dotted: '\u0323', tilde: '\u0303', slash: '\u0337', none: ''
   };
   var style = 'long';
 
@@ -49,7 +49,7 @@
   }
 
   function toStrikethrough(text, styleKey, bold, italic){
-    var mark = STRIKE[styleKey] || STRIKE.long;
+    var mark = (STRIKE[styleKey] !== undefined) ? STRIKE[styleKey] : STRIKE.long;
     return Array.from(text).map(function(ch){
       if(ch === '\n') return ch;
       return transformChar(ch, bold, italic) + mark;
@@ -80,13 +80,15 @@
   italicToggle.addEventListener('change', render);
 
   pills.forEach(function(p){
-    p.addEventListener('click', function(){
-      pills.forEach(function(x){ x.classList.remove('active'); });
-      p.classList.add('active');
-      style = p.dataset.style;
-      render();
-    });
+  p.addEventListener('click', function(){
+    pills.forEach(function(x){ x.classList.remove('active'); });
+    p.classList.add('active');
+    style = p.dataset.style;
+    if(style === 'bold-plain'){ style = 'none'; boldToggle.checked = true; italicToggle.checked = false; }
+    else if(style === 'italic-plain'){ style = 'none'; boldToggle.checked = false; italicToggle.checked = true; }
+    render();
   });
+});
 
   fileInput.addEventListener('change', function(){
     loadFile(fileInput.files[0]);

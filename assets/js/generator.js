@@ -84,8 +84,9 @@
     pills.forEach(function(x){ x.classList.remove('active'); });
     p.classList.add('active');
     style = p.dataset.style;
-    if(style === 'bold-plain'){ style = 'none'; boldToggle.checked = true; italicToggle.checked = false; }
-    else if(style === 'italic-plain'){ style = 'none'; boldToggle.checked = false; italicToggle.checked = true; }
+if(style === 'bold-plain'){ style = 'none'; boldToggle.checked = true; italicToggle.checked = false; }
+else if(style === 'italic-plain'){ style = 'none'; boldToggle.checked = false; italicToggle.checked = true; }
+else { boldToggle.checked = false; italicToggle.checked = false; }
     render();
   });
 });
@@ -141,6 +142,6 @@
 
   output.addEventListener('click', function(){ if(output.textContent) copyBtn.click(); });
 
-  input.value = 'First draft, then revised';
+  input.value = 'hello';
   render();
 })();
